@@ -1,1 +1,8 @@
-hello world
+<script src="socket.io.js"></script>
+<script>
+  var socket = io.connect('http://maps.addin.dk');
+  socket.on('news', function (data) {
+    console.log(data);
+    socket.emit('my other event', { my: 'data' });
+  });
+</script>
