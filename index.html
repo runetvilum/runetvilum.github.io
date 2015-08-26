@@ -1,6 +1,6 @@
 <script src="socket.io.js"></script>
 <script>
-  var socket = io.connect('maps.addin.dk');
+  var socket = io.connect('addin.dk');
   socket.on('news', function (data) {
     console.log(data);
     socket.emit('my other event', { my: 'data' });
